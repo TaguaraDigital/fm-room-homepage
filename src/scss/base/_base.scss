@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-family: var(--ff-body);
+   font-size: 12px;
+   font-weight: 500;
+   line-height: 1.5;
+   color: var(--very-dark-gray);
+}
+
+body{
+   width: 100%;
+   margin: 0; 
+   padding: 0;
+}
+
+img {
+   display: block;
+   width: 100%;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}

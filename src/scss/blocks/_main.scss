@@ -1,0 +1,134 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+.slides{
+    width: 300%;
+    display: flex;
+}
+
+.slide {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    
+    @include table {
+        flex-direction: row;
+    }
+
+    &__body{
+        width: 100%;
+        padding: 5.85rem 2.4rem 5.85rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        @include table {
+            width: 42%;
+        }
+    }
+
+    &__title {
+        font-size: 2.17rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        
+        @include table {
+            font-size: 38px;
+        }
+
+    }
+    
+    &__image {
+        width: 100%;    
+
+        @include table {
+            width: 58%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.second-row {
+    grid-area: second-row;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include table {
+        flex-direction: row;
+    }
+
+    &__dark-image {
+        width: 100%;
+
+        @include table {
+            width: 29.17%;
+        }
+    }
+
+    &__light-image {
+        width: 100%;
+
+        @include table {
+            width: 30.55%;
+        }
+    }
+
+    &__body{
+        width: 100%;
+        padding: 5.85rem 2.4rem 5.85rem 2.5rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        @include table {
+            width: 40.28%;
+        }
+        
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+        margin-bottom: 1rem;
+    }
+}
+.slide__btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4rem;
+    font-family: var(--ff-title);
+    font-weight: 700;
+    padding: 0;
+    border: 0;    
+    letter-spacing: .8rem;
+    text-transform: uppercase;
+    background-color: inherit;
+
+    
+    &:hover {
+        opacity: .5;
+    }
+
+    img {
+        margin-left: 2rem;
+        display: inline;
+    }
+}
