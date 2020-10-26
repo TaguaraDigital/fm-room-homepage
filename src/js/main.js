@@ -27,9 +27,9 @@ const slide = document.getElementById('slides')
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
 
-
 const amountSlide = slide.children.length
-let activeSlide = 1;
+let activeSlide = 0;
+
 
 const showSlide = () => {
     slide.style.transform = `translateX(${activeSlide *-1 * slide.clientWidth / amountSlide}px)`

@@ -8,16 +8,18 @@
     align-items: center;
     font-weight: 700;
     
-    @include laptop {
-      padding: 0 10em;  
-      color: var(--white);
-    }
-
     &--show {
-       z-index: 150;
+       z-index: 100;
        background-color: var(--white);
        transition: all .5s ease;
     }
+
+    @include laptop {
+      padding: 0 10em;  
+      color: var(--white);
+      background-color: transparent;
+    }
+
 }
 
 .nav__logo{
@@ -43,13 +45,16 @@
 
    &--show{
       display: flex;
-      z-index: 50;
 
       .nav__link{
+         // color: var(--black);
+         border-bottom: 1px solid transparent;
          
          &--active, 
          &:hover {
-            color: var(--very-light-gray);
+            color: var(--black);
+            border-color: var(--black);
+         
          }
       }
    }
@@ -67,11 +72,6 @@
       box-shadow: none;
       background-color: transparent;
    }
-   
-   @include laptop {
-      width: 50%;
-   }
-
 }
  
 .nav__list{
@@ -87,11 +87,14 @@
 }
  
 .nav__link{
-   color: var(--grayish-blue);
+   color: var(--black);
+   border-bottom: 1px solid transparent;
     
    &--active, 
    &:hover {
-      color: var(--very-dark-blue);
+      color: var(--white);
+      border-color: var(--white);
+      
 
    }
  
