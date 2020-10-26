@@ -144,7 +144,7 @@
     width: 8rem;
     height: 4rem;
     top: calc(60vh + .5rem);
-    left: calc(100% - 8rem);
+    left: calc(50% - 4rem);
     transform: translateY(-100%);
     z-index: 100;
     cursor: pointer;
@@ -159,7 +159,7 @@
         height: 6.5rem;
         padding: 2rem;
         top: 66.67%;
-        left: calc(100% - 14rem);
+        left: calc(50% - 7rem);
     }
 }
 
