@@ -6,14 +6,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 700;
     
     @include laptop {
       padding: 0 10em;  
+      color: var(--white);
     }
 
     &--show {
        z-index: 150;
        background-color: var(--white);
+       transition: all .5s ease;
     }
 }
 
