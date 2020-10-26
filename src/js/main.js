@@ -1,3 +1,6 @@
+/*=================== Slide image ===================*/
+const header = document.getElementById('header');
+const navLogo = document.getElementById('nav__logo');
 const toggleMenu = document.getElementById('toggle-menu');
 const mainNav = document.getElementById('main-nav');
 const navItems = document.querySelectorAll('.nav__item');
@@ -5,6 +8,8 @@ const navItems = document.querySelectorAll('.nav__item');
 let menuOpen = false;
 
 toggleMenu.addEventListener('click', () =>{
+   header.classList.toggle('header--show');
+   navLogo.classList.toggle('nav__logo--hidden');
    mainNav.classList.toggle('main-nav--show');
    toggleMenu.classList.toggle('toggle-menu--open');
  

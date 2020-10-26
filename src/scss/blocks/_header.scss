@@ -1,53 +1,54 @@
 .header{
    position: absolute;
     width: 100%;
-    height: var(--header-height);
+    height: 9rem;
     padding: 0 1.775rem;  
     display: flex;
     justify-content: space-between;
     align-items: center;
     
     @include laptop {
-      height: 9rem;
       padding: 0 10em;  
+    }
+
+    &--show {
+       z-index: 150;
+       background-color: var(--white);
     }
 }
 
 .nav__logo{
-    width: 5.85rem;
-    z-index: 100;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 100;
 
-    img {
-        display: block;
-        width: 100%;
+   &--hidden {
+      display:none;
+   }
+
+    @include table {
+       left: auto;
+       transform: translateX(0);
     }
 }
  
 .main-nav{
    display: none;
-   flex-direction: column;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
- 
+
    &--show{
-      width: 90%;
-      height: 30%;
-      position: absolute;
-      box-shadow: -1px 1px 5px var(--dark-grayish-blue);
-      top:  var(--header-height);
-      left: 5%;
-      z-index: 50;
       display: flex;
-      
+      z-index: 50;
+
       .nav__link{
-          
+         
          &--active, 
          &:hover {
             color: var(--very-light-gray);
          }
       }
-  
-      background-color: white;
    }
  
    @include table {
@@ -73,52 +74,21 @@
 .nav__list{
    z-index: 100;
    display: flex;
-   flex-direction: column;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
-
-   @include table {
-      width: fit-content;
-      position: relative;
-      margin: 0;
-      top: 0;
-      height: var(--header-height);
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      background: transparent;
-   }
 }
  
 .nav__item{
-   font-family: var(--ff-title);
+   margin-left: 1rem;
    text-align: center;
-   width: 100%;
-   margin: .5rem;
- 
-   @include table {
-      width: fit-content;
-      padding: 0;
-      margin: 0;
-   }
 }
  
 .nav__link{
-   text-transform: uppercase;
    color: var(--grayish-blue);
-   border-bottom: 1px solid transparent;
-   padding: .5rem 3rem;
-   display: block;
-   font-size: 1.1Rem;
-   font-weight: 700;
-   line-height: 1;
     
    &--active, 
    &:hover {
       color: var(--very-dark-blue);
-      border-bottom: 1px solid var(--dark-grayish-blue);
 
    }
  
