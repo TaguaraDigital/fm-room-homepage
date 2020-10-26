@@ -31,6 +31,7 @@
         align-items: flex-start;
         
         @include table {
+            padding: 10rem 8rem;
             width: 42%;
         }
     }
@@ -98,6 +99,7 @@
         align-items: flex-start;
         
         @include table {
+            padding: 5.85rem 4rem;
             width: 40.28%;
         }
         
