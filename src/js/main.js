@@ -16,3 +16,29 @@ toggleMenu.addEventListener('click', () =>{
     menuOpen = !menuOpen 
 
 })
+
+/*=================== Slide image ===================*/
+const slide = document.getElementById('slides')
+const prev = document.getElementById('prev')
+const next = document.getElementById('next')
+
+
+const amountSlide = slide.children.length
+let activeSlide = 1;
+
+const showSlide = () => {
+    slide.style.transform = `translateX(${activeSlide *-1 * slide.clientWidth / amountSlide}px)`
+    slide.style.transition = `transform .5s ease`
+}
+
+next.addEventListener('click',()=>{
+    if (activeSlide >= amountSlide - 1) return;
+    activeSlide += 1
+    showSlide()
+});
+
+prev.addEventListener('click',()=>{
+    if (activeSlide <= 0 ) return;
+    activeSlide -= 1
+    showSlide()
+});
